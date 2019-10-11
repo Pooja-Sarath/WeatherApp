@@ -64,7 +64,7 @@ app.get('/weather', (req, res) => {
                 if(error)
                     res.send({error : "Error getting the weather report"});
                 if(response){                    
-                    res.send({temperature : response.temperature, location : req.query.address});
+                    res.send({message : response, location : req.query.address});
                 }
             })
         }

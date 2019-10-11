@@ -12,8 +12,8 @@ module.exports.forecast = (data, callback)=>{
             callback(error, undefined)
         } 
         if(response.body.currently){
-            const result = {temperature : response.body.currently.temperature,
-                    precipitation : response.body.currently.precipProbability};
+            const result = " The temperature is " + response.body.currently.temperature +
+                    " with a precipitation of " +response.body.currently.precipProbability;
             callback(undefined, result)
         }
         
